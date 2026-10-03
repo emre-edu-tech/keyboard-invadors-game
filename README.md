@@ -24,7 +24,7 @@ A falling-words typing game for ICT lessons. Words fall from the top of the scre
 
 1. Create an empty project folder (any name you like) and open OpenCode inside it. That folder is the **project root**.
 2. Copy `AGENTS.md`, `README.md`, `ASSET-GUIDE.md` and the `specs/` folder into the root **yourself**. The agent never creates or edits them (see "Project structure" below).
-3. Run `git init` and make a first commit.
+3. Run `git init` yourself and make a first commit. **Git is entirely your responsibility** — `AGENTS.md` tells the agent never to run any git command, at any step.
 4. Do the asset shopping in `ASSET-GUIDE.md` **while the agent builds steps 01–07**. You do not need assets before step 08.
 
 ## The loop for every step
@@ -33,7 +33,7 @@ A falling-words typing game for ICT lessons. Words fall from the top of the scre
 2. Paste the prompt at the top of the step's spec file.
 3. Run the game (`npm run serve`, then open http://localhost:8000; use `?debug=1` for the debug panel).
 4. Go through the **Manual test** checklist at the bottom of the spec. Every box must pass.
-5. All passed → commit with the message suggested in the spec. Something failed → paste the failing checklist item and the browser console error into the same session. Do not start the next step until the current one passes.
+5. All passed → **you** commit, using the message suggested at the bottom of the spec (the agent never runs git — see step 3 above). Something failed → paste the failing checklist item and the browser console error into the same session. Do not start the next step until the current one passes.
 6. If the free-tier session limit hits mid-step: commit work-in-progress (`wip: step 0X`), start a new session and say *"Continue step 0X. Check `git diff` and the spec for what is left."*
 
 ## Steps
