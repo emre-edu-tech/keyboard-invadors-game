@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: #0b0b1f;
+    overflow-x: hidden;
+  }
+
+  #game-root {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  #game-canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}

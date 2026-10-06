@@ -1,0 +1,14 @@
+{
+  "name": "keyboard-invaders",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "css:build": "tailwindcss -i ./css/input.css -o ./css/app.css --minify",
+    "css:watch": "tailwindcss -i ./css/input.css -o ./css/app.css --watch",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4"
+  }
+}

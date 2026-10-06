@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyboard Invaders</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body class="min-h-screen bg-bg font-ui text-text flex items-center justify-center">
+  <script>
+    // Non-module inline script: ES modules do not load from file://,
+    // so show a hint when the page is opened by double-clicking.
+    if (location.protocol === 'file:') {
+      document.addEventListener('DOMContentLoaded', function () {
+        var warning = document.createElement('p');
+        warning.id = 'file-protocol-warning';
+        warning.textContent = 'Please run the game through a local server (npm run serve).';
+        warning.setAttribute('style', 'position:fixed;top:0;left:0;right:0;padding:8px;text-align:center;background:#ff5a6e;color:#0b0b1f;font-weight:bold;z-index:50;');
+        document.body.prepend(warning);
+      });
+    }
+  </script>
+
+  <!-- Dev note: `npm run serve` uses `python -m http.server 8000`; on some Windows setups use `py -m http.server 8000`. -->
+  <main class="w-full flex flex-col items-center justify-center gap-4 p-4">
+    <div id="game-root" class="w-full flex justify-center">
+      <canvas id="game-canvas" width="1280" height="720"></canvas>
+    </div>
+    <noscript>
+      <p>Bu oyunu oynamak için JavaScript gereklidir. / JavaScript is required to play this game.</p>
+    </noscript>
+  </main>
+
+  <!-- TODO(spec): removed in step 03. Temporary badge proving the Tailwind pipeline works. -->
+  <span class="fixed bottom-2 right-2 rounded bg-accent px-2 py-1 text-xs font-bold text-bg">Tailwind OK</span>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
