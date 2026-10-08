@@ -22,8 +22,9 @@
   </script>
 
   <!-- Dev note: `npm run serve` uses `python -m http.server 8000`; on some Windows setups use `py -m http.server 8000`. -->
-  <main class="w-full flex flex-col items-center justify-center gap-4 p-4">
-    <div id="game-root" class="w-full flex justify-center">
+  <!-- The play area's 16:9 size is set in css/input.css (#game-root), not with utility classes. -->
+  <main class="w-full flex flex-col items-center justify-center">
+    <div id="game-root">
       <canvas id="game-canvas" width="1280" height="720"></canvas>
     </div>
     <noscript>
