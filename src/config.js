@@ -5,6 +5,7 @@ export const CONFIG = Object.freeze({
   WIDTH: 1280, // logical game width in px
   HEIGHT: 720, // logical game height in px
   GAME_VERSION: '0.1.0', // current build version string
+  UI_LANG: 'tr', // UI language: 'tr' (Turkish) or 'en' (English)
   COLORS: Object.freeze({
     bg: '#0b0b1f', // page and canvas background
     panel: '#15153a', // overlay panels, word plates
