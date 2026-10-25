@@ -24,16 +24,13 @@
   <!-- Dev note: `npm run serve` uses `python -m http.server 8000`; on some Windows setups use `py -m http.server 8000`. -->
   <!-- The play area's 16:9 size is set in css/input.css (#game-root), not with utility classes. -->
   <main class="w-full flex flex-col items-center justify-center">
-    <div id="game-root">
+    <div id="game-root" class="relative">
       <canvas id="game-canvas" width="1280" height="720"></canvas>
     </div>
     <noscript>
       <p>Bu oyunu oynamak için JavaScript gereklidir. / JavaScript is required to play this game.</p>
     </noscript>
   </main>
-
-  <!-- TODO(spec): removed in step 03. Temporary badge proving the Tailwind pipeline works. -->
-  <span class="fixed bottom-2 right-2 rounded bg-accent px-2 py-1 text-xs font-bold text-bg">Tailwind OK</span>
 
   <script type="module" src="src/main.js"></script>
 </body>
